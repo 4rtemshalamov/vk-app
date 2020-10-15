@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import bridge from '@vkontakte/vk-bridge';
+// import {Provider} from "react-redux";
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    // <Provider>
+    <App bridge={bridge} />,
+    // </Provider>,
   document.getElementById('root')
 );
 
